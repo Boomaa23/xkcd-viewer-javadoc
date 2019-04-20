@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -158,6 +158,12 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>static java.awt.Image</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/JSONUtils.html#resizeImage-java.awt.Image-">resizeImage</a></span>(java.awt.Image&nbsp;image)</code>
+<div class="block">Resizes images to fit on screens without scrolling.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/JSONUtils.html#saveImage-org.json.JSONObject-">saveImage</a></span>(org.json.JSONObject&nbsp;json)</code>
 <div class="block">Saves image to file from JSONObject.</div>
@@ -243,6 +249,22 @@ extends java.lang.Object</pre>
 <dd><code>java.net.MalformedURLException</code> - if a new URL could not be read from the "img" tag.</dd>
 <dd><code>org.json.JSONException</code> - if the tag "img" could not be found in the JSONObject parameter.</dd>
 <dd><code>java.io.IOException</code> - if the URL is invalid or could not be read from.</dd>
+</dl>
+</li>
+</ul>
+<a name="resizeImage-java.awt.Image-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resizeImage</h4>
+<pre>public static&nbsp;java.awt.Image&nbsp;resizeImage(java.awt.Image&nbsp;image)</pre>
+<div class="block"><p>Resizes images to fit on screens without scrolling.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>image</code> - the originally pulled image to resize</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the resized image proportional to the screen size if the scaling image is checked</dd>
 </dl>
 </li>
 </ul>
