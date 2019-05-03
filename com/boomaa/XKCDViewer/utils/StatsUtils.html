@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -129,12 +129,18 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private javax.swing.JFrame</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#frame">frame</a></span></code>
+<div class="block">Temporary passed frame of each window's object.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private org.json.JSONObject</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#json">json</a></span></code>
 <div class="block">Temporary JSON of each window's object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>private javax.swing.JPanel</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#mainPanel">mainPanel</a></span></code>
 <div class="block">Temporary passed mainPanel of each window's object.</div>
@@ -155,8 +161,9 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#StatsUtils-org.json.JSONObject-javax.swing.JPanel-">StatsUtils</a></span>(org.json.JSONObject&nbsp;json,
-          javax.swing.JPanel&nbsp;mainPanel)</code>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#StatsUtils-org.json.JSONObject-javax.swing.JPanel-javax.swing.JFrame-">StatsUtils</a></span>(org.json.JSONObject&nbsp;json,
+          javax.swing.JPanel&nbsp;mainPanel,
+          javax.swing.JFrame&nbsp;frame)</code>
 <div class="block">Constructs panel for each window object.</div>
 </td>
 </tr>
@@ -188,13 +195,19 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colFirst"><code>private java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#byteTranscribe-long-">byteTranscribe</a></span>(long&nbsp;bytes)</code>
 <div class="block">Turns bytes into human-readable SI units.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>long</code></td>
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#frameInit--">frameInit</a></span>()</code>
+<div class="block">Initializes frame and sets size.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>private long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#imageSize--">imageSize</a></span>()</code>
 <div class="block">Gets size of JSON-accessed image.</div>
 </td>
@@ -234,11 +247,21 @@ extends java.lang.Object</pre>
 <a name="mainPanel">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>mainPanel</h4>
 <pre>private&nbsp;javax.swing.JPanel mainPanel</pre>
 <div class="block"><p>Temporary passed mainPanel of each window's object.</p></div>
+</li>
+</ul>
+<a name="frame">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>frame</h4>
+<pre>private&nbsp;javax.swing.JFrame frame</pre>
+<div class="block"><p>Temporary passed frame of each window's object.</p></div>
 </li>
 </ul>
 </li>
@@ -249,19 +272,21 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="StatsUtils-org.json.JSONObject-javax.swing.JPanel-">
+<a name="StatsUtils-org.json.JSONObject-javax.swing.JPanel-javax.swing.JFrame-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>StatsUtils</h4>
 <pre>public&nbsp;StatsUtils(org.json.JSONObject&nbsp;json,
-                  javax.swing.JPanel&nbsp;mainPanel)</pre>
+                  javax.swing.JPanel&nbsp;mainPanel,
+                  javax.swing.JFrame&nbsp;frame)</pre>
 <div class="block"><p>Constructs panel for each window object.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>json</code> - JSON of current image.</dd>
 <dd><code>mainPanel</code> - mainPanel from stats inspect/image list.</dd>
+<dd><code>frame</code> - the frame from stats inspect/image list.</dd>
 </dl>
 </li>
 </ul>
@@ -273,6 +298,16 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="frameInit--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>frameInit</h4>
+<pre>private&nbsp;void&nbsp;frameInit()</pre>
+<div class="block"><p>Initializes frame and sets size.</p></div>
+</li>
+</ul>
 <a name="addPanelItems--">
 <!--   -->
 </a>
@@ -303,7 +338,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>imageSize</h4>
-<pre>public&nbsp;long&nbsp;imageSize()</pre>
+<pre>private&nbsp;long&nbsp;imageSize()</pre>
 <div class="block"><p>Gets size of JSON-accessed image.</p></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -317,7 +352,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>byteTranscribe</h4>
-<pre>public&nbsp;java.lang.String&nbsp;byteTranscribe(long&nbsp;bytes)</pre>
+<pre>private&nbsp;java.lang.String&nbsp;byteTranscribe(long&nbsp;bytes)</pre>
 <div class="block"><p>Turns bytes into human-readable SI units.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
