@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/boomaa/XKCDViewer/utils/Listeners.ThreadSelectorAction.html" title="class in com.boomaa.XKCDViewer.utils"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/boomaa/XKCDViewer/utils/MiscListeners.SelectItemAction.html" title="class in com.boomaa.XKCDViewer.utils"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li>Next&nbsp;Class</li>
 </ul>
 <ul class="navList">
@@ -185,28 +185,35 @@ extends java.lang.Object</pre>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#addLabelPanel-java.lang.String-">addLabelPanel</a></span>(java.lang.String&nbsp;text)</code>
-<div class="block">Makes new nested label in new panel for each panel item.</div>
+<div class="block">Overloads String and boolean parameter addLabelPanel as false boolean.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#addLabelPanel-java.lang.String-boolean-">addLabelPanel</a></span>(java.lang.String&nbsp;text,
+             boolean&nbsp;href)</code>
+<div class="block">Makes new nested label in new panel for each panel item.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#addPanelItems--">addPanelItems</a></span>()</code>
 <div class="block">Adds each statistic item to the main panel.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>private java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#byteTranscribe-long-">byteTranscribe</a></span>(long&nbsp;bytes)</code>
 <div class="block">Turns bytes into human-readable SI units.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#frameInit--">frameInit</a></span>()</code>
 <div class="block">Initializes frame and sets size.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>private long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#imageSize--">imageSize</a></span>()</code>
 <div class="block">Gets size of JSON-accessed image.</div>
@@ -325,10 +332,26 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>addLabelPanel</h4>
 <pre>private&nbsp;void&nbsp;addLabelPanel(java.lang.String&nbsp;text)</pre>
+<div class="block"><p>Overloads String and boolean parameter addLabelPanel as false boolean.</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>text</code> - the text to input.</dd>
+</dl>
+</li>
+</ul>
+<a name="addLabelPanel-java.lang.String-boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addLabelPanel</h4>
+<pre>private&nbsp;void&nbsp;addLabelPanel(java.lang.String&nbsp;text,
+                           boolean&nbsp;href)</pre>
 <div class="block"><p>Makes new nested label in new panel for each panel item.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>text</code> - the text to input.</dd>
+<dd><code>href</code> - note if text should become a hyperlink.</dd>
 </dl>
 </li>
 </ul>
@@ -389,7 +412,7 @@ extends java.lang.Object</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/boomaa/XKCDViewer/utils/Listeners.ThreadSelectorAction.html" title="class in com.boomaa.XKCDViewer.utils"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/boomaa/XKCDViewer/utils/MiscListeners.SelectItemAction.html" title="class in com.boomaa.XKCDViewer.utils"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li>Next&nbsp;Class</li>
 </ul>
 <ul class="navList">
