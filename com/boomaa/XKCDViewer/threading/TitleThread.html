@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10};
+var methods = {"i0":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -134,18 +134,12 @@ implements java.lang.Runnable</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>private boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#alive">alive</a></span></code>
-<div class="block">If the thread is still running.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>private int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#end">end</a></span></code>
 <div class="block">The ending index to request titles to.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#start">start</a></span></code>
 <div class="block">The starting index to request titles of.</div>
@@ -187,12 +181,6 @@ implements java.lang.Runnable</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#isAlive--">isAlive</a></span>()</code>
-<div class="block">Deterimines if thread is still running.</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#run--">run</a></span>()</code>&nbsp;</td>
 </tr>
@@ -218,16 +206,6 @@ implements java.lang.Runnable</pre>
 <!--   -->
 </a>
 <h3>Field Detail</h3>
-<a name="alive">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>alive</h4>
-<pre>private&nbsp;boolean alive</pre>
-<div class="block"><p>If the thread is still running.</p></div>
-</li>
-</ul>
 <a name="start">
 <!--   -->
 </a>
@@ -283,27 +261,13 @@ implements java.lang.Runnable</pre>
 <a name="run--">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>run</h4>
 <pre>public&nbsp;void&nbsp;run()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>run</code>&nbsp;in interface&nbsp;<code>java.lang.Runnable</code></dd>
-</dl>
-</li>
-</ul>
-<a name="isAlive--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>isAlive</h4>
-<pre>public&nbsp;boolean&nbsp;isAlive()</pre>
-<div class="block"><p>Deterimines if thread is still running.</p></div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if titles are still being requested, false if not.</dd>
 </dl>
 </li>
 </ul>
