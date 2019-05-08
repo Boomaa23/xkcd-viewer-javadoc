@@ -183,40 +183,39 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>private void</code></td>
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#addLabelPanel-java.lang.String-">addLabelPanel</a></span>(java.lang.String&nbsp;text)</code>
 <div class="block">Overloads String and boolean parameter addLabelPanel as false boolean.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>private void</code></td>
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#addLabelPanel-java.lang.String-boolean-">addLabelPanel</a></span>(java.lang.String&nbsp;text,
              boolean&nbsp;href)</code>
 <div class="block">Makes new nested label in new panel for each panel item.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#addPanelItems--">addPanelItems</a></span>()</code>
-<div class="block">Adds each statistic item to the main panel.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>private java.lang.String</code></td>
+<td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#byteTranscribe-long-">byteTranscribe</a></span>(long&nbsp;bytes)</code>
 <div class="block">Turns bytes into human-readable SI units.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#frameInit--">frameInit</a></span>()</code>
 <div class="block">Initializes frame and sets size.</div>
 </td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#getHostIP--">getHostIP</a></span>()</code>&nbsp;</td>
+</tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>private long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#imageSize--">imageSize</a></span>()</code>
-<div class="block">Gets size of JSON-accessed image.</div>
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/StatsUtils.html#webResourceSize-java.lang.String-boolean-">webResourceSize</a></span>(java.lang.String&nbsp;loc,
+               boolean&nbsp;nested)</code>
+<div class="block">Gets size of any web resource.</div>
 </td>
 </tr>
 </table>
@@ -315,23 +314,13 @@ extends java.lang.Object</pre>
 <div class="block"><p>Initializes frame and sets size.</p></div>
 </li>
 </ul>
-<a name="addPanelItems--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addPanelItems</h4>
-<pre>public&nbsp;void&nbsp;addPanelItems()</pre>
-<div class="block"><p>Adds each statistic item to the main panel.</p></div>
-</li>
-</ul>
 <a name="addLabelPanel-java.lang.String-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addLabelPanel</h4>
-<pre>private&nbsp;void&nbsp;addLabelPanel(java.lang.String&nbsp;text)</pre>
+<pre>public&nbsp;void&nbsp;addLabelPanel(java.lang.String&nbsp;text)</pre>
 <div class="block"><p>Overloads String and boolean parameter addLabelPanel as false boolean.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -345,8 +334,8 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>addLabelPanel</h4>
-<pre>private&nbsp;void&nbsp;addLabelPanel(java.lang.String&nbsp;text,
-                           boolean&nbsp;href)</pre>
+<pre>public&nbsp;void&nbsp;addLabelPanel(java.lang.String&nbsp;text,
+                          boolean&nbsp;href)</pre>
 <div class="block"><p>Makes new nested label in new panel for each panel item.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -355,15 +344,19 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="imageSize--">
+<a name="webResourceSize-java.lang.String-boolean-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>imageSize</h4>
-<pre>private&nbsp;long&nbsp;imageSize()</pre>
-<div class="block"><p>Gets size of JSON-accessed image.</p></div>
+<h4>webResourceSize</h4>
+<pre>public&nbsp;long&nbsp;webResourceSize(java.lang.String&nbsp;loc,
+                            boolean&nbsp;nested)</pre>
+<div class="block"><p>Gets size of any web resource.</p></div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>loc</code> - the location of the web resource to get the size of.</dd>
+<dd><code>nested</code> - if the location is nested in a json.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>size of image in bytes.</dd>
 </dl>
@@ -372,10 +365,10 @@ extends java.lang.Object</pre>
 <a name="byteTranscribe-long-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>byteTranscribe</h4>
-<pre>private&nbsp;java.lang.String&nbsp;byteTranscribe(long&nbsp;bytes)</pre>
+<pre>public&nbsp;java.lang.String&nbsp;byteTranscribe(long&nbsp;bytes)</pre>
 <div class="block"><p>Turns bytes into human-readable SI units.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -383,6 +376,15 @@ extends java.lang.Object</pre>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the bytes passed in as SI units.</dd>
 </dl>
+</li>
+</ul>
+<a name="getHostIP--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getHostIP</h4>
+<pre>public&nbsp;java.lang.String&nbsp;getHostIP()</pre>
 </li>
 </ul>
 </li>
