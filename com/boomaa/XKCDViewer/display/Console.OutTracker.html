@@ -153,12 +153,6 @@ extends java.io.OutputStream</pre>
 <div class="block">Holder for data on screen.</div>
 </td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>private java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Console.OutTracker.html#title">title</a></span></code>
-<div class="block">Prefix after hostname and before data.</div>
-</td>
-</tr>
 </table>
 </li>
 </ul>
@@ -174,9 +168,8 @@ extends java.io.OutputStream</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Console.OutTracker.html#OutTracker-javax.swing.JTextArea-java.lang.String-">OutTracker</a></span>(javax.swing.JTextArea&nbsp;textArea,
-          java.lang.String&nbsp;prefix)</code>
-<div class="block">Constructs OutTracker with textArea and prefix.</div>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Console.OutTracker.html#OutTracker-javax.swing.JTextArea-">OutTracker</a></span>(javax.swing.JTextArea&nbsp;textArea)</code>
+<div class="block">Constructs OutTracker with textArea.</div>
 </td>
 </tr>
 </table>
@@ -240,21 +233,11 @@ extends java.io.OutputStream</pre>
 <a name="sb">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>sb</h4>
 <pre>private&nbsp;java.lang.StringBuilder sb</pre>
 <div class="block"><p>StringBuilder to house each data line.</p></div>
-</li>
-</ul>
-<a name="title">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>title</h4>
-<pre>private&nbsp;java.lang.String title</pre>
-<div class="block"><p>Prefix after hostname and before data.</p></div>
 </li>
 </ul>
 </li>
@@ -265,19 +248,17 @@ extends java.io.OutputStream</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="OutTracker-javax.swing.JTextArea-java.lang.String-">
+<a name="OutTracker-javax.swing.JTextArea-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>OutTracker</h4>
-<pre>public&nbsp;OutTracker(javax.swing.JTextArea&nbsp;textArea,
-                  java.lang.String&nbsp;prefix)</pre>
-<div class="block"><p>Constructs OutTracker with textArea and prefix.</p></div>
+<pre>public&nbsp;OutTracker(javax.swing.JTextArea&nbsp;textArea)</pre>
+<div class="block"><p>Constructs OutTracker with textArea.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>textArea</code> - the displayed text field to push data to.</dd>
-<dd><code>prefix</code> - the hostname before the data.</dd>
 </dl>
 </li>
 </ul>
