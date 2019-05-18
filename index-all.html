@@ -110,6 +110,10 @@
 <dd>
 <div class="block">Makes new nested label in new panel for each panel item.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#addLoginComponents-javax.swing.JComponent...-">addLoginComponents(JComponent...)</a></span> - Method in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
+<dd>
+<div class="block">A more efficient wrapper for adding JComponents</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#addMouseListeners-java.awt.event.MouseAdapter-javax.swing.JLabel...-">addMouseListeners(MouseAdapter, JLabel...)</a></span> - Method in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
 <dd>
 <div class="block">Adds mouse listeners of the passed listener to the JLabels.</div>
@@ -251,6 +255,10 @@
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/DevStats.html#frame">frame</a></span> - Variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/DevStats.html" title="class in com.boomaa.XKCDViewer.display">DevStats</a></dt>
 <dd>
 <div class="block">Stats display frame.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#frame">frame</a></span> - Variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
+<dd>
+<div class="block">Displayed leaderboard frame.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/SelectList.html#frame">frame</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/SelectList.html" title="class in com.boomaa.XKCDViewer.display">SelectList</a></dt>
 <dd>
@@ -420,7 +428,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#Leaderboard--">Leaderboard()</a></span> - Constructor for class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
 <dd>
-<div class="block">Creates leaderboard with 3 columns for rank, number, and votes.</div>
+<div class="block">Creates leaderboard at login stage with full listener implementation.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/utils/JDEC.html#LEADERBOARD">LEADERBOARD</a></span> - Static variable in interface com.boomaa.XKCDViewer.utils.<a href="com/boomaa/XKCDViewer/utils/JDEC.html" title="interface in com.boomaa.XKCDViewer.utils">JDEC</a></dt>
 <dd>
@@ -463,6 +471,10 @@
 <dt><a href="com/boomaa/XKCDViewer/utils/Listeners.SelectItemAction.html" title="class in com.boomaa.XKCDViewer.utils"><span class="typeNameLink">Listeners.SelectItemAction</span></a> - Class in <a href="com/boomaa/XKCDViewer/utils/package-summary.html">com.boomaa.XKCDViewer.utils</a></dt>
 <dd>
 <div class="block">Changes selector menu after the item selected is changed.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#loginPanel">loginPanel</a></span> - Variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
+<dd>
+<div class="block">The panel that stores the login page.</div>
 </dd>
 </dl>
 <a name="I:M">
@@ -648,6 +660,14 @@
 <dd>
 <div class="block">Sizes frame around XKCD image.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#setupFTPLogin--">setupFTPLogin()</a></span> - Method in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
+<dd>
+<div class="block">Sets up login before leaderboard, initializes FTP authentication.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#setupLeaderboard--">setupLeaderboard()</a></span> - Method in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
+<dd>
+<div class="block">Sets up leaderboard in 3x11 grid with rank, number, and votes.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/MainDisplay.html#setupScroll--">setupScroll()</a></span> - Static method in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/MainDisplay.html" title="class in com.boomaa.XKCDViewer.display">MainDisplay</a></dt>
 <dd>
 <div class="block">Determines if a vertical scrollbar is needed and displays if so.</div>
@@ -750,7 +770,7 @@
 <dd>
 <div class="block">Updates JSON on vote server with latest xkcd numbers.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Leaderboard.html#uploadToFTP-java.lang.String-">uploadToFTP(String)</a></span> - Method in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Leaderboard.html" title="class in com.boomaa.XKCDViewer.display">Leaderboard</a></dt>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/utils/DisplayUtils.html#uploadToFTP-java.lang.String-java.lang.String-">uploadToFTP(String, String)</a></span> - Static method in class com.boomaa.XKCDViewer.utils.<a href="com/boomaa/XKCDViewer/utils/DisplayUtils.html" title="class in com.boomaa.XKCDViewer.utils">DisplayUtils</a></dt>
 <dd>
 <div class="block">Uploads passed string to FTP.</div>
 </dd>

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,9 +150,21 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>private javax.swing.JFrame</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#frame">frame</a></span></code>
+<div class="block">Displayed leaderboard frame.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>private java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#FTP_URL">FTP_URL</a></span></code>
 <div class="block">URL for FTP uploads - HTTP doesn't work with some sites because of not having JS.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>private javax.swing.JPanel</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#loginPanel">loginPanel</a></span></code>
+<div class="block">The panel that stores the login page.</div>
 </td>
 </tr>
 </table>
@@ -171,7 +183,7 @@ extends java.lang.Object</pre>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#Leaderboard--">Leaderboard</a></span>()</code>
-<div class="block">Creates leaderboard with 3 columns for rank, number, and votes.</div>
+<div class="block">Creates leaderboard at login stage with full listener implementation.</div>
 </td>
 </tr>
 </table>
@@ -197,22 +209,34 @@ extends java.lang.Object</pre>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#addLoginComponents-javax.swing.JComponent...-">addLoginComponents</a></span>(javax.swing.JComponent...&nbsp;comp)</code>
+<div class="block">A more efficient wrapper for adding JComponents</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>private javax.swing.JLabel[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#addMouseListeners-java.awt.event.MouseAdapter-javax.swing.JLabel...-">addMouseListeners</a></span>(java.awt.event.MouseAdapter&nbsp;listen,
                  javax.swing.JLabel...&nbsp;labels)</code>
 <div class="block">Adds mouse listeners of the passed listener to the JLabels.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#setupFTPLogin--">setupFTPLogin</a></span>()</code>
+<div class="block">Sets up login before leaderboard, initializes FTP authentication.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>private void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#setupLeaderboard--">setupLeaderboard</a></span>()</code>
+<div class="block">Sets up leaderboard in 3x11 grid with rank, number, and votes.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>private void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#updateToLatest-org.json.JSONObject-">updateToLatest</a></span>(org.json.JSONObject&nbsp;voteJSON)</code>
 <div class="block">Updates JSON on vote server with latest xkcd numbers.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>private void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/display/Leaderboard.html#uploadToFTP-java.lang.String-">uploadToFTP</a></span>(java.lang.String&nbsp;append)</code>
-<div class="block">Uploads passed string to FTP.</div>
 </td>
 </tr>
 </table>
@@ -240,15 +264,31 @@ extends java.lang.Object</pre>
 <a name="FTP_URL">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>FTP_URL</h4>
-<pre>private final&nbsp;java.lang.String FTP_URL</pre>
+<pre>private&nbsp;java.lang.String FTP_URL</pre>
 <div class="block"><p>URL for FTP uploads - HTTP doesn't work with some sites because of not having JS.</p></div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#com.boomaa.XKCDViewer.display.Leaderboard.FTP_URL">Constant Field Values</a></dd>
-</dl>
+</li>
+</ul>
+<a name="frame">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>frame</h4>
+<pre>private&nbsp;javax.swing.JFrame frame</pre>
+<div class="block"><p>Displayed leaderboard frame.</p></div>
+</li>
+</ul>
+<a name="loginPanel">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>loginPanel</h4>
+<pre>private&nbsp;javax.swing.JPanel loginPanel</pre>
+<div class="block"><p>The panel that stores the login page.</p></div>
 </li>
 </ul>
 </li>
@@ -266,7 +306,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>Leaderboard</h4>
 <pre>public&nbsp;Leaderboard()</pre>
-<div class="block"><p>Creates leaderboard with 3 columns for rank, number, and votes.</p></div>
+<div class="block"><p>Creates leaderboard at login stage with full listener implementation.</p></div>
 </li>
 </ul>
 </li>
@@ -277,6 +317,40 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="setupFTPLogin--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupFTPLogin</h4>
+<pre>private&nbsp;void&nbsp;setupFTPLogin()</pre>
+<div class="block"><p>Sets up login before leaderboard, initializes FTP authentication.</p></div>
+</li>
+</ul>
+<a name="setupLeaderboard--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setupLeaderboard</h4>
+<pre>private&nbsp;void&nbsp;setupLeaderboard()</pre>
+<div class="block"><p>Sets up leaderboard in 3x11 grid with rank, number, and votes.</p></div>
+</li>
+</ul>
+<a name="addLoginComponents-javax.swing.JComponent...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addLoginComponents</h4>
+<pre>private&nbsp;void&nbsp;addLoginComponents(javax.swing.JComponent...&nbsp;comp)</pre>
+<div class="block"><p>A more efficient wrapper for adding JComponents</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>comp</code> - as many JComponent objects as should be added.</dd>
+</dl>
+</li>
+</ul>
 <a name="addMouseListeners-java.awt.event.MouseAdapter-javax.swing.JLabel...-">
 <!--   -->
 </a>
@@ -314,7 +388,7 @@ extends java.lang.Object</pre>
 <a name="updateToLatest-org.json.JSONObject-">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>updateToLatest</h4>
 <pre>private&nbsp;void&nbsp;updateToLatest(org.json.JSONObject&nbsp;voteJSON)
@@ -325,23 +399,6 @@ extends java.lang.Object</pre>
 <dd><code>voteJSON</code> - the current JSON contents.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - if the FTP upload fails.</dd>
-</dl>
-</li>
-</ul>
-<a name="uploadToFTP-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>uploadToFTP</h4>
-<pre>private&nbsp;void&nbsp;uploadToFTP(java.lang.String&nbsp;append)
-                  throws java.io.IOException</pre>
-<div class="block"><p>Uploads passed string to FTP.</p></div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>append</code> - the content to affix to the voting JSON.</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.io.IOException</code> - if anything happens to the connections.</dd>
 </dl>
 </li>
 </ul>
