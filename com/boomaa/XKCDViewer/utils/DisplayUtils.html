@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -146,39 +146,46 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#addPanelComponents-javax.swing.JComponent-javax.swing.JComponent...-">addPanelComponents</a></span>(javax.swing.JComponent&nbsp;panel,
+                  javax.swing.JComponent...&nbsp;comp)</code>
+<div class="block">A more efficient wrapper for adding JComponents</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static java.awt.Image</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#getImageFromJSON-com.google.gson.JsonObject-">getImageFromJSON</a></span>(com.google.gson.JsonObject&nbsp;jsonObj)</code>
 <div class="block">Reads and image from a JSONObject.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static com.google.gson.JsonObject</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#getJSONFromFTP-java.lang.String-">getJSONFromFTP</a></span>(java.lang.String&nbsp;ftpurl)</code>
 <div class="block">Reads the address of an FTP URL of a JSON and returns it back.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static com.google.gson.JsonObject</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#getJSONFromHTTP-java.lang.String-">getJSONFromHTTP</a></span>(java.lang.String&nbsp;url)</code>
 <div class="block">Reads the address of a URL of a JSON and returns it back.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static java.awt.Image</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#resizeImage-java.awt.Image-">resizeImage</a></span>(java.awt.Image&nbsp;image)</code>
 <div class="block">Resizes images to fit on screens without scrolling.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#saveImage-com.google.gson.JsonObject-">saveImage</a></span>(com.google.gson.JsonObject&nbsp;json)</code>
 <div class="block">Saves image to file from JSONObject.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#uploadToFTP-java.lang.String-java.lang.String-">uploadToFTP</a></span>(java.lang.String&nbsp;append,
-           java.lang.String&nbsp;ftpUrl)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/DisplayUtils.html#uploadToFTP-java.lang.String-int-">uploadToFTP</a></span>(java.lang.String&nbsp;append,
+           int&nbsp;modValue)</code>
 <div class="block">Uploads passed string to FTP.</div>
 </td>
 </tr>
@@ -312,22 +319,38 @@ extends java.lang.Object</pre>
 </dl>
 </li>
 </ul>
-<a name="uploadToFTP-java.lang.String-java.lang.String-">
+<a name="uploadToFTP-java.lang.String-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>uploadToFTP</h4>
 <pre>public static&nbsp;void&nbsp;uploadToFTP(java.lang.String&nbsp;append,
-                               java.lang.String&nbsp;ftpUrl)
+                               int&nbsp;modValue)
                         throws java.io.IOException</pre>
 <div class="block"><p>Uploads passed string to FTP.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>append</code> - the content to affix to the voting JSON.</dd>
-<dd><code>ftpUrl</code> - the url to send the appended string to.</dd>
+<dd><code>modValue</code> - the change in vote (+/-), if any.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.io.IOException</code> - if anything happens to the connections.</dd>
+</dl>
+</li>
+</ul>
+<a name="addPanelComponents-javax.swing.JComponent-javax.swing.JComponent...-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>addPanelComponents</h4>
+<pre>public static&nbsp;void&nbsp;addPanelComponents(javax.swing.JComponent&nbsp;panel,
+                                      javax.swing.JComponent...&nbsp;comp)</pre>
+<div class="block"><p>A more efficient wrapper for adding JComponents</p></div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>panel</code> - the enclosing swing object to add the comp items to.</dd>
+<dd><code>comp</code> - as many JComponent objects as should be added.</dd>
 </dl>
 </li>
 </ul>
