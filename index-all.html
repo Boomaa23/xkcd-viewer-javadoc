@@ -268,17 +268,9 @@
 <dd>
 <div class="block">JFrame displayed which everything is added to.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/utils/StatsUtils.html#frame">frame</a></span> - Variable in class com.boomaa.XKCDViewer.utils.<a href="com/boomaa/XKCDViewer/utils/StatsUtils.html" title="class in com.boomaa.XKCDViewer.utils">StatsUtils</a></dt>
-<dd>
-<div class="block">Temporary passed frame of each window's object.</div>
-</dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/MainDisplay.html#FRAME_BORDER">FRAME_BORDER</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/MainDisplay.html" title="class in com.boomaa.XKCDViewer.display">MainDisplay</a></dt>
 <dd>
 <div class="block">The number of pixels of the frame border.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/utils/StatsUtils.html#frameInit--">frameInit()</a></span> - Method in class com.boomaa.XKCDViewer.utils.<a href="com/boomaa/XKCDViewer/utils/StatsUtils.html" title="class in com.boomaa.XKCDViewer.utils">StatsUtils</a></dt>
-<dd>
-<div class="block">Initializes frame and sets size.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Login.html#FTP_URL">FTP_URL</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Login.html" title="class in com.boomaa.XKCDViewer.display">Login</a></dt>
 <dd>
@@ -478,6 +470,10 @@
 <dd>
 <div class="block">Authenticates FTP credentials through GUI.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/utils/JDEC.html#LOGIN">LOGIN</a></span> - Static variable in interface com.boomaa.XKCDViewer.utils.<a href="com/boomaa/XKCDViewer/utils/JDEC.html" title="interface in com.boomaa.XKCDViewer.utils">JDEC</a></dt>
+<dd>
+<div class="block">Opens new FTP authentication window.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/Login.html#loginPanel">loginPanel</a></span> - Variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/Login.html" title="class in com.boomaa.XKCDViewer.display">Login</a></dt>
 <dd>
 <div class="block">Panel containing login elements.</div>
@@ -530,7 +526,7 @@
 <dd>
 <div class="block">Storage of votes and number.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/SelectList.html#NUM">NUM</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/SelectList.html" title="class in com.boomaa.XKCDViewer.display">SelectList</a></dt>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/SelectList.html#num">num</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/SelectList.html" title="class in com.boomaa.XKCDViewer.display">SelectList</a></dt>
 <dd>
 <div class="block">Currently displayed image number.</div>
 </dd>
@@ -740,13 +736,15 @@
 <dd>
 <div class="block">Runs each thread to get all titles.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/threading/ThreadManager.html#time">time</a></span> - Static variable in class com.boomaa.XKCDViewer.threading.<a href="com/boomaa/XKCDViewer/threading/ThreadManager.html" title="class in com.boomaa.XKCDViewer.threading">ThreadManager</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/utils/JDEC.html#TITLE_PANEL">TITLE_PANEL</a></span> - Static variable in interface com.boomaa.XKCDViewer.utils.<a href="com/boomaa/XKCDViewer/utils/JDEC.html" title="interface in com.boomaa.XKCDViewer.utils">JDEC</a></dt>
 <dd>
 <div class="block">Shows currently displayed XKCD number and title at top.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/SelectList.html#titles">titles</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/SelectList.html" title="class in com.boomaa.XKCDViewer.display">SelectList</a></dt>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/threading/ThreadManager.html#TITLE_THREADS">TITLE_THREADS</a></span> - Static variable in class com.boomaa.XKCDViewer.threading.<a href="com/boomaa/XKCDViewer/threading/ThreadManager.html" title="class in com.boomaa.XKCDViewer.threading">ThreadManager</a></dt>
+<dd>
+<div class="block">Storage of all title threads, utilized for isAlive().</div>
+</dd>
+<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/SelectList.html#TITLES">TITLES</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/SelectList.html" title="class in com.boomaa.XKCDViewer.display">SelectList</a></dt>
 <dd>
 <div class="block">Storage of all titles for all xkcd.</div>
 </dd>
@@ -761,10 +759,6 @@
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/threading/TitleThread.html#TitleThread-int-int-">TitleThread(int, int)</a></span> - Constructor for class com.boomaa.XKCDViewer.threading.<a href="com/boomaa/XKCDViewer/threading/TitleThread.html" title="class in com.boomaa.XKCDViewer.threading">TitleThread</a></dt>
 <dd>
 <div class="block">Constructs a thread with passed start and finish indexes.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/threading/ThreadManager.html#titleThreads">titleThreads</a></span> - Static variable in class com.boomaa.XKCDViewer.threading.<a href="com/boomaa/XKCDViewer/threading/ThreadManager.html" title="class in com.boomaa.XKCDViewer.threading">ThreadManager</a></dt>
-<dd>
-<div class="block">Storage of all title threads, utilized for isAlive().</div>
 </dd>
 <dt><span class="memberNameLink"><a href="com/boomaa/XKCDViewer/display/MainDisplay.html#TRANSFERRED_BYTES">TRANSFERRED_BYTES</a></span> - Static variable in class com.boomaa.XKCDViewer.display.<a href="com/boomaa/XKCDViewer/display/MainDisplay.html" title="class in com.boomaa.XKCDViewer.display">MainDisplay</a></dt>
 <dd>
