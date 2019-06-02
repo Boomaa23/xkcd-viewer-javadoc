@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10};
+var methods = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -118,7 +118,7 @@ var activeTableTab = "activeTableTab";
 <pre>public static class <span class="typeNameLabel">Listeners.NumSelect</span>
 extends java.lang.Object
 implements java.awt.event.ActionListener</pre>
-<div class="block"><p>Navigates to and displays input XKCD imgage upon actionPerformed().</p></div>
+<div class="block"><p>Navigates to and displays input XKCD image upon actionPerformed().</p></div>
 </li>
 </ul>
 </div>
@@ -157,6 +157,12 @@ implements java.awt.event.ActionListener</pre>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/Listeners.NumSelect.html#actionPerformed-java.awt.event.ActionEvent-">actionPerformed</a></span>(java.awt.event.ActionEvent&nbsp;e)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>private boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/utils/Listeners.NumSelect.html#containsNull--">containsNull</a></span>()</code>
+<div class="block">Checks to make sure ThreadManager.TITLES is not still filling.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -200,13 +206,27 @@ implements java.awt.event.ActionListener</pre>
 <a name="actionPerformed-java.awt.event.ActionEvent-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>actionPerformed</h4>
 <pre>public&nbsp;void&nbsp;actionPerformed(java.awt.event.ActionEvent&nbsp;e)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>actionPerformed</code>&nbsp;in interface&nbsp;<code>java.awt.event.ActionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="containsNull--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>containsNull</h4>
+<pre>private&nbsp;boolean&nbsp;containsNull()</pre>
+<div class="block"><p>Checks to make sure ThreadManager.TITLES is not still filling.</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if a null object is found, false if not.</dd>
 </dl>
 </li>
 </ul>
