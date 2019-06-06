@@ -140,6 +140,12 @@ implements java.lang.Runnable</pre>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>private int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#num">num</a></span></code>
+<div class="block">The sequentially ordered ID of this thread.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#start">start</a></span></code>
 <div class="block">The starting index to request titles of.</div>
@@ -160,7 +166,8 @@ implements java.lang.Runnable</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#TitleThread-int-int-">TitleThread</a></span>(int&nbsp;start,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/boomaa/XKCDViewer/threading/TitleThread.html#TitleThread-int-int-int-">TitleThread</a></span>(int&nbsp;num,
+           int&nbsp;start,
            int&nbsp;reqpt)</code>
 <div class="block">Constructs a thread with passed start and finish indexes.</div>
 </td>
@@ -219,11 +226,21 @@ implements java.lang.Runnable</pre>
 <a name="end">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>end</h4>
 <pre>private&nbsp;int end</pre>
 <div class="block"><p>The ending index to request titles to.</p></div>
+</li>
+</ul>
+<a name="num">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>num</h4>
+<pre>private&nbsp;int num</pre>
+<div class="block"><p>The sequentially ordered ID of this thread.</p></div>
 </li>
 </ul>
 </li>
@@ -234,17 +251,19 @@ implements java.lang.Runnable</pre>
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="TitleThread-int-int-">
+<a name="TitleThread-int-int-int-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TitleThread</h4>
-<pre>public&nbsp;TitleThread(int&nbsp;start,
+<pre>public&nbsp;TitleThread(int&nbsp;num,
+                   int&nbsp;start,
                    int&nbsp;reqpt)</pre>
 <div class="block"><p>Constructs a thread with passed start and finish indexes.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>num</code> - the arbitrary sequential ID of the thread.</dd>
 <dd><code>start</code> - the start index of titles.</dd>
 <dd><code>reqpt</code> - the number of requests to complete.</dd>
 </dl>
